@@ -7,6 +7,6 @@ output "parent_pool" {
 }
 
 output "pools" {
-  description = "The pools created by the module."
-  value       = aws_vpc_ipam_pool.child
+  description = "The sub pools including cidr blocks created by the module."
+  value       = aws_vpc_ipam_pool_cidr.child
 }
