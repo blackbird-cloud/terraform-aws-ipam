@@ -8,5 +8,5 @@ output "parent_pool" {
 
 output "pools" {
   description = "The pools created by the module."
-  value       = var.pools
+  value       = aws_vpc_ipam_pool.child
 }
