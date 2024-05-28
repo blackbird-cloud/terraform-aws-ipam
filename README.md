@@ -1,18 +1,12 @@
-# AWS IPAM Terraform module
-A Terraform module which configures your AWS IPAM.  
+# <Cloud> <Main resource> Terraform module
+A Terraform module which configures your <Cloud> <Main resource>. <Relevant docs>
 [![blackbird-logo](https://raw.githubusercontent.com/blackbird-cloud/terraform-module-template/main/.config/logo_simple.png)](https://www.blackbird.cloud)
 
 ## Example
 ```hcl
-locals {
-  networking_account_id = "123456789012"
-  staging_account_id    = "123456789013"
-  production_account_id = "123456789014"
-}
-
 module "ipam" {
-  # source  = "github.com/blackbird-cloud/terraform-aws-ipam"
-  source = "../"
+  source  = "blackbird-cloud/ipam/aws"
+  version = "~> 1"
 
   region = "eu-central-1"
 
@@ -26,19 +20,19 @@ module "ipam" {
       address_family = "ipv4"
       cidr_block     = "10.0.0.0/16"
       description    = "shared pool"
-      resource_share = local.networking_account_id
+      resource_share = "12345678910"
     }
     staging = {
       address_family = "ipv4"
       cidr_block     = "10.1.0.0/16"
       description    = "Staging workload pool"
-      resource_share = local.staging_account_id
+      resource_share = "12345678910"
     }
     production = {
       address_family = "ipv4"
       cidr_block     = "10.2.0.0/16"
       description    = "Production workload pool"
-      resource_share = local.production_account_id
+      resource_share = "12345678910"
     }
   }
 }
@@ -86,7 +80,7 @@ module "ipam" {
 | Name | Description |
 |------|-------------|
 | <a name="output_parent_pool"></a> [parent\_pool](#output\_parent\_pool) | The parent pool created by the module. |
-| <a name="output_pools"></a> [pools](#output\_pools) | The pools created by the module. |
+| <a name="output_pools"></a> [pools](#output\_pools) | The sub pools including cidr blocks created by the module. |
 
 ## About
 
