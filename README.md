@@ -1,6 +1,8 @@
-# AWS IPAM Terraform module
-A Terraform module which configures your AWS IPAM.  
-[![blackbird-logo](https://raw.githubusercontent.com/blackbird-cloud/terraform-module-template/main/.config/logo_simple.png)](https://www.blackbird.cloud)
+<!-- BEGIN_TF_DOCS -->
+# Terraform Aws Ipam Module
+Terraform module to manage IPAM in AWS
+
+[![blackbird-logo](https://raw.githubusercontent.com/blackbird-cloud/terraform-module-template/main/.config/logo_simple.png)](https://blackbird.cloud)
 
 ## Example
 ```hcl
@@ -86,7 +88,7 @@ module "ipam" {
 | Name | Description |
 |------|-------------|
 | <a name="output_parent_pool"></a> [parent\_pool](#output\_parent\_pool) | The parent pool created by the module. |
-| <a name="output_pools"></a> [pools](#output\_pools) | The pools created by the module. |
+| <a name="output_pools"></a> [pools](#output\_pools) | The sub pools including cidr blocks created by the module. |
 
 ## About
 
@@ -96,4 +98,5 @@ Checkout our other :point\_right: [terraform modules](https://registry.terraform
 
 ## Copyright
 
-Copyright © 2017-2023 [Blackbird Cloud](https://www.blackbird.cloud)
+Copyright © 2017-2024 [Blackbird Cloud](https://blackbird.cloud)
+<!-- END_TF_DOCS -->
