@@ -78,8 +78,8 @@ module "ipam" {
 |------|-------------|------|---------|:--------:|
 | <a name="input_cascade"></a> [cascade](#input\_cascade) | (Optional) Enables you to quickly delete an IPAM, private scopes, pools in private scopes, and any allocations in the pools in private scopes. | `bool` | `null` | no |
 | <a name="input_description"></a> [description](#input\_description) | (Optional) A description for the IPAM. | `string` | `"My IPAM"` | no |
-| <a name="input_parent_pool"></a> [parent\_pool](#input\_parent\_pool) | The parent pool to create in the IPAM. | <pre>object({<br>    address_family = string<br>    cidr_block     = string<br>  })</pre> | n/a | yes |
-| <a name="input_pools"></a> [pools](#input\_pools) | The pools to create in the IPAM. | <pre>map(object({<br>    address_family = string<br>    description    = optional(string)<br>    auto_import    = optional(bool)<br>    cidr_block     = string<br>    resource_share = optional(string)<br>  }))</pre> | n/a | yes |
+| <a name="input_parent_pool"></a> [parent\_pool](#input\_parent\_pool) | The parent pool to create in the IPAM. | <pre>object({<br/>    address_family = string<br/>    cidr_block     = string<br/>  })</pre> | n/a | yes |
+| <a name="input_pools"></a> [pools](#input\_pools) | The pools to create in the IPAM. | <pre>map(object({<br/>    address_family = string<br/>    description    = optional(string)<br/>    auto_import    = optional(bool)<br/>    cidr_block     = string<br/>    resource_share = optional(string)<br/>  }))</pre> | n/a | yes |
 | <a name="input_region"></a> [region](#input\_region) | AWS Region used for picking up the ARNs for the securityhub standards subscriptions. | `string` | n/a | yes |
 | <a name="input_tags"></a> [tags](#input\_tags) | (Optional) A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level. | `map(string)` | `{}` | no |
 
@@ -98,5 +98,5 @@ Checkout our other :point\_right: [terraform modules](https://registry.terraform
 
 ## Copyright
 
-Copyright © 2017-2024 [Blackbird Cloud](https://blackbird.cloud)
+Copyright © 2017-2025 [Blackbird Cloud](https://blackbird.cloud)
 <!-- END_TF_DOCS -->
